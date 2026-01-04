@@ -49,21 +49,50 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative hidden md:block"
-        >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
-               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-2xl rotate-6 opacity-20 blur-lg"></div>
-               <img 
-                 src="https://picsum.photos/600/600" 
-                 alt="Developer Workspace" 
-                 className="relative w-full h-full object-cover rounded-2xl border-2 border-slate-700 shadow-2xl grayscale hover:grayscale-0 transition-all duration-500"
-               />
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
+              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                {PERSONAL_INFO.name}
+              </span>
+            </h1>
+          
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-100 mb-6 tracking-wide">
+              {PERSONAL_INFO.role}
+            </h2>
+          
+            <p className="text-lg md:text-xl text-blue-300 font-medium mb-6 italic border-l-4 border-blue-500/50 pl-4">
+              {PERSONAL_INFO.tagline}
+            </p>
+          
+            <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mb-10 text-justify">
+              {PERSONAL_INFO.bio}
+            </p>
+          
+            <div className="flex flex-wrap gap-4 mt-12">
+              <a 
+                href="#contact" 
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-colors flex items-center gap-2 shadow-lg shadow-blue-500/25"
+              >
+                Contact Me
+              </a>
+              
+              {PERSONAL_INFO.social.upwork && (
+                <a 
+                  href={PERSONAL_INFO.social.upwork}
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-medium transition-colors border border-slate-700 flex items-center gap-2"
+                >
+                  Upwork Profile
+                </a>
+              )}
             </div>
-        </motion.div>
+          </motion.div>
       </div>
     </section>
   );
