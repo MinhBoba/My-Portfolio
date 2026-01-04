@@ -80,12 +80,11 @@ export const INDUSTRIAL_PROJECTS: Project[] = [
 export const PERSONAL_PROJECTS: Project[] = [
   {
     id: "p1",
-    title: "Route Optimization Tool",
-    description: "A web app solving the Vehicle Routing Problem (VRP) using Google OR-Tools.",
-    techStack: ["Python", "Flask", "React", "Google Maps API"],
+    title: "Bank of Mavenland analysis",
+    description: "A detailed analysis of a bank dataset, including testing hypotheses, prediction models.",
+    techStack: ["Python", "Machine Learning", "Feature Engineering", "Binning"],
     imageUrl: "https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    repoUrl: "https://github.com/MinhBoba",
-    demoUrl: "#"
+    demoUrl: "https://colab.research.google.com/drive/1JWOoMvVg44PNM6l1YP0_Q1PgHBgZw_NB?authuser=2#scrollTo=60KabdzsdX1s"
   },
   {
     id: "p2",
