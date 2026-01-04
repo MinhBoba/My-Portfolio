@@ -84,7 +84,8 @@ export const PERSONAL_PROJECTS: Project[] = [
     description: "A detailed analysis of a bank dataset, including testing hypotheses, prediction models.",
     techStack: ["Python", "Machine Learning", "Feature Engineering", "Binning"],
     imageUrl: "https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    demoUrl: "https://colab.research.google.com/drive/1JWOoMvVg44PNM6l1YP0_Q1PgHBgZw_NB?authuser=2#scrollTo=60KabdzsdX1s"
+    repoUrl: "https://colab.research.google.com/drive/1JWOoMvVg44PNM6l1YP0_Q1PgHBgZw_NB?authuser=2#scrollTo=60KabdzsdX1s",
+    demoUrl: ""
   },
   {
     id: "p2",
