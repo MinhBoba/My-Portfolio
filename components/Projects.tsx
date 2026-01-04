@@ -1,12 +1,56 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PROJECTS } from '../constants';
+import { INDUSTRIAL_PROJECTS, PERSONAL_PROJECTS } from '../constants';
 import { ExternalLink, Github } from 'lucide-react';
+
+const ProjectCard = ({ project, index }: { project: any, index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    className="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-2xl hover:shadow-blue-500/10"
+  >
+    <div className="relative h-48 overflow-hidden">
+      <div className="absolute inset-0 bg-slate-900/50 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+      <img 
+        src={project.imageUrl} 
+        alt={project.title} 
+        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+      />
+    </div>
+    
+    <div className="p-6">
+      <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
+      <p className="text-slate-400 text-sm mb-4 line-clamp-3">
+        {project.description}
+      </p>
+      
+      <div className="flex flex-wrap gap-2 mb-6">
+        {project.techStack.map((tech: string) => (
+          <span key={tech} className="text-xs px-2 py-1 bg-slate-700 rounded text-slate-300 border border-slate-600">
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      <div className="flex gap-4">
+        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-medium transition-colors">
+          <ExternalLink size={14} /> Demo
+        </a>
+        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm font-medium transition-colors">
+          <Github size={14} /> Code
+        </a>
+      </div>
+    </div>
+  </motion.div>
+);
 
 const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,51 +64,24 @@ const Projects: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROJECTS.map((project, idx) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-2xl hover:shadow-blue-500/10"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <div className="absolute inset-0 bg-slate-900/50 group-hover:bg-slate-900/0 transition-colors z-10"></div>
-                <img 
-                  src={project.imageUrl} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                <p className="text-slate-400 text-sm mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.techStack.map((tech) => (
-                    <span key={tech} className="text-xs px-2 py-1 bg-slate-700 rounded text-slate-300 border border-slate-600">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex gap-4">
-                  <a href={project.demoUrl} className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-medium transition-colors">
-                    <ExternalLink size={14} /> Demo
-                  </a>
-                  <a href={project.repoUrl} className="flex-1 flex items-center justify-center gap-2 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm font-medium transition-colors">
-                    <Github size={14} /> Code
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold mb-8 border-l-4 border-blue-500 pl-4">Industrial Projects</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {INDUSTRIAL_PROJECTS.map((project, idx) => (
+              <ProjectCard key={project.id || idx} project={project} index={idx} />
+            ))}
+          </div>
         </div>
+
+        <div>
+          <h3 className="text-2xl font-bold mb-8 border-l-4 border-green-500 pl-4">Personal Projects</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PERSONAL_PROJECTS.map((project, idx) => (
+              <ProjectCard key={project.id || idx} project={project} index={idx} />
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
