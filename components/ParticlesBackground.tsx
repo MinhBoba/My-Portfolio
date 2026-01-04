@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
+// src/components/ParticlesBackground.tsx
+import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { type Container, type Engine } from "@tsparticles/engine";
@@ -15,7 +16,7 @@ const ParticlesBackground = () => {
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
+    // console.log(container);
   };
 
   if (!init) return <></>;
@@ -24,40 +25,79 @@ const ParticlesBackground = () => {
     <Particles
       id="tsparticles"
       particlesLoaded={particlesLoaded}
+      className="absolute inset-0 z-0" // Tailwind: Full màn hình, nằm dưới cùng
       options={{
         background: {
-          color: { value: "#0d47a1" }, // Màu nền (bỏ dòng này nếu muốn nền trong suốt đè lên component khác)
+          color: {
+            value: "transparent", // Để trong suốt để lấy màu nền slate-900 của App
+          },
         },
         fpsLimit: 120,
         interactivity: {
           events: {
-            onHover: { enable: true, mode: "repulse" }, // Di chuột vào hạt sẽ né ra
-            resize: { enable: true },
+            onHover: {
+              enable: true,
+              mode: "grab", // Di chuột vào các hạt sẽ nối dây với chuột
+            },
+            onClick: {
+              enable: true,
+              mode: "push", // Click thêm hạt
+            },
+            resize: { enable: true }, 
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              links: {
+                opacity: 1,
+              },
+            },
+            push: {
+              quantity: 4,
+            },
           },
         },
         particles: {
-          color: { value: "#ffffff" },
+          color: {
+            value: "#ffffff",
+          },
           links: {
             color: "#ffffff",
             distance: 150,
-            enable: true, // Nối dây giữa các hạt
-            opacity: 0.5,
+            enable: true,
+            opacity: 0.2, // Độ mờ dây nối (để thấp cho đỡ rối mắt)
             width: 1,
           },
           move: {
+            direction: "none",
             enable: true,
-            speed: 2,
+            outModes: {
+              default: "bounce",
+            },
+            random: false,
+            speed: 1, // Tốc độ bay
+            straight: false,
           },
           number: {
-            density: { enable: true, width: 800, height: 800 },
-            value: 80,
+            density: {
+              enable: true,
+              width: 800,
+              height: 800,
+            },
+            value: 80, // Số lượng hạt
           },
-          opacity: { value: 0.5 },
-          size: { value: { min: 1, max: 5 } },
+          opacity: {
+            value: 0.3, // Độ mờ của hạt
+          },
+          shape: {
+            type: "circle",
+          },
+          size: {
+            value: { min: 1, max: 3 },
+          },
         },
         detectRetina: true,
       }}
-      className="absolute top-0 left-0 w-full h-full -z-10" // Class Tailwind để đẩy xuống background
     />
   );
 };
