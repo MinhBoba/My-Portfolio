@@ -99,8 +99,5 @@ export const PERSONAL_PROJECTS: Project[] = [
 ];
 
 export const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1579560417240-a3528b3b64c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // qCodK5vqaNs: Mạng lưới đường
-  "https://images.unsplash.com/photo-1616405788484-df7a627f940b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // LaU3HadwEeE: Biểu đồ chứng khoán
-  "https://images.unsplash.com/photo-1549692520-cb97c27183e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // oMe_FjZnHGU: Màn hình máy tính
-  "https://images.unsplash.com/photo-1627916688691-1b9b9a6b2b2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // nuz3rK5iiKg: Sách với biểu đồ
+  "https://plus.unsplash.com/premium_photo-1681487767138-ddf2d67b35c1?q=80&w=2155&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ];
