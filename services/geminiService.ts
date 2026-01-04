@@ -1,11 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
-import { PERSONAL_INFO, SKILLS, EXPERIENCE, PROJECTS } from '../constants';
+import { PERSONAL_INFO, SKILLS, EXPERIENCE, INDUSTRIAL_PROJECTS, PERSONAL_PROJECTS } from '../constants';
 
 // Initialize the Gemini Client
-// IMPORTANT: In a real production app, never expose keys in client-side code unless restricted by domain.
-// For this portfolio demo, we assume the environment variable is injected during build.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-
+const PROJECTS = [...INDUSTRIAL_PROJECTS, ...PERSONAL_PROJECTS];
 // Construct the system instruction to give the AI context about the candidate
 const constructSystemInstruction = (): string => {
   const skillsStr = SKILLS.map(s => `${s.category}: ${s.items.join(', ')}`).join('; ');
