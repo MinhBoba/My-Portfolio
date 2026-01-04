@@ -35,13 +35,26 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => (
       </div>
 
       <div className="flex gap-4">
-        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-medium transition-colors">
-          <ExternalLink size={14} /> Demo
-        </a>
-        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm font-medium transition-colors">
-          <Github size={14} /> Code
-        </a>
-      </div>
+          {project.demoUrl && project.demoUrl !== "" && project.demoUrl !== "#" && (
+            <a 
+              href={project.demoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-medium transition-colors"
+            >
+              <ExternalLink size={14} /> Demo
+            </a>
+          )}
+        
+          <a 
+            href={project.repoUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex-1 flex items-center justify-center gap-2 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm font-medium transition-colors"
+          >
+            <Github size={14} /> Code
+          </a>
+        </div>
     </div>
   </motion.div>
 );
