@@ -27,9 +27,12 @@ const Hero: React.FC = () => {
           <h2 className="text-2xl md:text-3xl text-slate-400 mb-6 font-light">
             {PERSONAL_INFO.title}
           </h2>
-          <p className="text-lg text-slate-300 mb-8 max-w-lg leading-relaxed">
-            {PERSONAL_INFO.tagline} {PERSONAL_INFO.bio}
-          </p>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent leading-tight">
+            {PERSONAL_INFO.tagline}
+          </h2>
+          <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            {PERSONAL_INFO.bio}
+            </p>
           
           <div className="flex flex-wrap gap-4">
             <a href="#contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all hover:scale-105 flex items-center gap-2">
