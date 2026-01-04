@@ -97,9 +97,10 @@ export const PERSONAL_PROJECTS: Project[] = [
     demoUrl: "#"
   }
 ];
+
 export const HERO_IMAGES = [
-  "https://unsplash.com/fr/photos/une-photo-en-noir-et-blanc-dun-reseau-de-lignes-qCodK5vqaNs",
-  "https://unsplash.com/fr/photos/concept-danalyse-de-donnees-boursieres-et-fintech-graphiques-a-barres-numeriques-bleus-et-violets-sur-fond-bleu-fonce-interface-financiere-futuriste-rendu-3d-LaU3HadwEeE",
-  "https://unsplash.com/fr/photos/gros-plan-dun-ecran-dordinateur-avec-un-arriere-plan-flou-oMe_FjZnHGU",
-  "https://unsplash.com/fr/photos/un-livre-avec-un-diagramme-dessus-nuz3rK5iiKg",
+  "https://images.unsplash.com/photo-1579560417240-a3528b3b64c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // qCodK5vqaNs: Mạng lưới đường
+  "https://images.unsplash.com/photo-1616405788484-df7a627f940b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // LaU3HadwEeE: Biểu đồ chứng khoán
+  "https://images.unsplash.com/photo-1549692520-cb97c27183e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // oMe_FjZnHGU: Màn hình máy tính
+  "https://images.unsplash.com/photo-1627916688691-1b9b9a6b2b2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // nuz3rK5iiKg: Sách với biểu đồ
 ];
