@@ -51,7 +51,36 @@ export const EXPERIENCE: Experience[] = [
   }
 ];
 
-export const PERSONEL PROJECTS: Project[] = [
+export const INDUSTRIAL_PROJECTS: Project[] = [
+  {
+    id: "p1",
+    title: "AI Analytics Dashboard",
+    description: "A real-time dashboard visualizing complex datasets using D3.js, with natural language queries powered by Gemini.",
+    techStack: ["React", "D3.js", "Gemini API", "Tailwind"],
+    imageUrl: "https://picsum.photos/600/400?random=1",
+    repoUrl: "#",
+    demoUrl: "#"
+  },
+  {
+    id: "p2",
+    title: "E-Commerce SaaS Platform",
+    description: "A multi-tenant e-commerce solution supporting 10k+ concurrent users.",
+    techStack: ["Next.js", "PostgreSQL", "Stripe", "Redis"],
+    imageUrl: "https://picsum.photos/600/400?random=2",
+    repoUrl: "#",
+    demoUrl: "#"
+  },
+  {
+    id: "p3",
+    title: "TaskMaster Pro",
+    description: "Productivity application with offline support and real-time collaboration.",
+    techStack: ["React", "Firebase", "PWA", "Redux"],
+    imageUrl: "https://picsum.photos/600/400?random=3",
+    repoUrl: "#",
+    demoUrl: "#"
+  }
+];
+export const PERSONAL_PROJECTS: Project[] = [
   {
     id: "p1",
     title: "AI Analytics Dashboard",
