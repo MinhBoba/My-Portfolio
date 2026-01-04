@@ -1,37 +1,37 @@
 import { Project, Experience, Skill } from './types';
 
 export const PERSONAL_INFO = {
-  name: "Alex Dev",
+  name: "Khai Minh",
   title: "Senior Full Stack Engineer",
   tagline: "Building scalable web applications with React, TypeScript, and AI.",
-  bio: "I am a passionate software engineer with over 8 years of experience building high-performance web applications. I specialize in the React ecosystem and have recently been integrating LLMs like Gemini into production workflows. I am available for full-time roles and Upwork contracts.",
-  email: "alex.dev@example.com",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  upwork: "https://upwork.com"
+  bio: "I am a professional Analyst in supply chain, and operational optimization. Skilled in leveraging data-driven insights, predictive modeling, and optimization techniques to improve operational efficiency, reduce costs, and drive strategic decision-making. Experienced in using Python, SQL, and advanced analytics tools to solve complex business problems and deliver measurable impact. ",
+  email: "trankhaiminh2706@gmail.com",
+  github: "https://github.com/MinhBoba",
+  linkedin: "https://www.linkedin.com/in/tr%E1%BA%A7n-kh%E1%BA%A3i-minh-109488291/",
+  upwork: "https://www.upwork.com/freelancers/~01fad62ed85e7df9ac"
 };
 
 export const SKILLS: Skill[] = [
   {
-    category: "Frontend",
-    items: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Framer Motion", "D3.js"]
+    "category": "Data Engineering & Analytics",
+    "items": ["Python", "SQL / T-SQL / PostgreSQL", "Pandas / NumPy", "Airflow", "dbt", "Snowflake"]
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Python", "PostgreSQL", "GraphQL", "Redis"]
+    "category": "AI & ML",
+    "items": ["scikit-learn", "PyTorch", "TensorFlow", "Prophet", "XGBoost", "Gemini API"]
   },
   {
-    category: "AI & Cloud",
-    items: ["Gemini API", "Google Cloud", "AWS", "Docker", "Kubernetes"]
+    "category": "Cloud & DevOps",
+    "items": ["AWS", "Google Cloud", "Docker", "Kubernetes", "Redis", "GraphQL", "APIs"]
   }
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
     id: "1",
-    role: "Senior Frontend Engineer",
-    company: "TechFlow Solutions",
-    period: "2021 - Present",
+    role: "Optimization Analyst",
+    company: "Workforce Optimizer - AI enabled workforce",
+    period: "7/2025 - Present",
     description: [
       "Led the migration of a legacy monolith to a micro-frontend architecture using React and Webpack.",
       "Improved site performance by 40% through code splitting and image optimization.",
@@ -40,9 +40,9 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     id: "2",
-    role: "Full Stack Developer",
-    company: "Creative Digital Agency",
-    period: "2018 - 2021",
+    role: "Optimization Engineer",
+    company: "Nam Thuan Garment",
+    period: "2/2025 - 7/2021",
     description: [
       "Developed custom e-commerce solutions for high-profile clients.",
       "Integrated payment gateways (Stripe, PayPal) and headless CMS platforms.",
