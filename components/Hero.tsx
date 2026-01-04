@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, ExternalLink } from 'lucide-react';
-// Nhớ import thêm HERO_IMAGES vừa tạo
 import { PERSONAL_INFO, HERO_IMAGES } from '../constants';
 
 const Hero: React.FC = () => {
-  // Logic chuyển ảnh
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -13,7 +11,7 @@ const Hero: React.FC = () => {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === HERO_IMAGES.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Chuyển ảnh sau mỗi 3000ms (3 giây)
+    }, 3000);
 
     return () => clearInterval(timer);
   }, []);
@@ -28,7 +26,6 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
-        {/* --- CỘT TRÁI: NỘI DUNG TEXT --- */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -91,17 +88,14 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* --- CỘT PHẢI: SLIDESHOW ẢNH --- */}
         <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden md:flex justify-center items-center relative h-[400px]" // Set chiều cao cố định để tránh giật
+            className="hidden md:flex justify-center items-center relative h-[400px]"
         >
-            {/* Hiệu ứng Glow phía sau */}
             <div className="absolute w-80 h-80 bg-gradient-to-tr from-blue-600 to-cyan-500 rounded-full blur-[100px] opacity-30 animate-pulse"></div>
             
-            {/* Khung ảnh */}
             <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-800">
               <AnimatePresence mode='wait'>
                 <motion.img 
@@ -116,7 +110,6 @@ const Hero: React.FC = () => {
                 />
               </AnimatePresence>
               
-              {/* Lớp phủ gradient nhẹ lên ảnh cho đẹp */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
             </div>
         </motion.div>
