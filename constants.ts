@@ -2,8 +2,8 @@ import { Project, Experience, Skill } from './types';
 
 export const PERSONAL_INFO = {
   name: "Khai Minh",
-  title: "Senior Full Stack Engineer",
-  tagline: "Building scalable web applications with React, TypeScript, and AI.",
+  title: "Supply Chain Analyst - Optimization Engineer - Process Engineer",
+  tagline: "Building algorithms, mathematical models, analytics and data solutions in supply chain",
   bio: "I am a professional Analyst in supply chain, and operational optimization. Skilled in leveraging data-driven insights, predictive modeling, and optimization techniques to improve operational efficiency, reduce costs, and drive strategic decision-making. Experienced in using Python, SQL, and advanced analytics tools to solve complex business problems and deliver measurable impact. ",
   email: "trankhaiminh2706@gmail.com",
   github: "https://github.com/MinhBoba",
@@ -51,7 +51,7 @@ export const EXPERIENCE: Experience[] = [
   }
 ];
 
-export const PROJECTS: Project[] = [
+export const PERSONEL PROJECTS: Project[] = [
   {
     id: "p1",
     title: "AI Analytics Dashboard",
