@@ -98,8 +98,8 @@ export const PERSONAL_PROJECTS: Project[] = [
   }
 ];
 export const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Ảnh Kho bãi / Logistics
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Ảnh Data Analytics
-  "https://images.unsplash.com/photo-1494412574643-35d324698420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Ảnh Container / Supply Chain
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Ảnh Tech / Cybersecurity
+  "https://unsplash.com/fr/photos/une-photo-en-noir-et-blanc-dun-reseau-de-lignes-qCodK5vqaNs",
+  "https://unsplash.com/fr/photos/concept-danalyse-de-donnees-boursieres-et-fintech-graphiques-a-barres-numeriques-bleus-et-violets-sur-fond-bleu-fonce-interface-financiere-futuriste-rendu-3d-LaU3HadwEeE",
+  "https://unsplash.com/fr/photos/gros-plan-dun-ecran-dordinateur-avec-un-arriere-plan-flou-oMe_FjZnHGU",
+  "https://unsplash.com/fr/photos/un-livre-avec-un-diagramme-dessus-nuz3rK5iiKg",
 ];
