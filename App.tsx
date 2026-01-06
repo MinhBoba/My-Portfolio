@@ -1,4 +1,6 @@
-// App.tsx
+================================================
+FILE: App.tsx
+================================================
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -8,11 +10,13 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AIChat from './components/AIChat';
+// Import component hiệu ứng nền
 import ParticlesBackground from './components/ParticlesBackground';
-import ProjectDemo from './components/ProjectDemo'; // Import component mới
+import ProjectDemo from './components/ProjectDemo';
 
-// Tạo component HomePage chứa nội dung cũ
+// Gom trang chủ lại thành 1 component gọn gàng
 const HomePage = () => (
+  // Thêm z-10 để nội dung nổi lên trên nền hạt
   <div className="relative z-10">
     <Header />
     <main>
@@ -29,15 +33,15 @@ const HomePage = () => (
 function App() {
   return (
     <HashRouter>
+      {/* Container chính: Relative để chứa Particles (Absolute) */}
       <div className="relative bg-slate-900 text-white min-h-screen selection:bg-blue-500/30 overflow-hidden">
-        {/* Background dùng chung cho cả app */}
+        
+        {/* HIỆU ỨNG NỀN: Đặt 1 lần duy nhất tại đây */}
         <ParticlesBackground />
 
+        {/* Nội dung thay đổi theo Route */}
         <Routes>
-          {/* Route trang chủ */}
           <Route path="/" element={<HomePage />} />
-          
-          {/* Route trang demo, nhận projectId làm tham số */}
           <Route path="/demo/:projectId" element={<ProjectDemo />} />
         </Routes>
         
