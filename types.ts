@@ -26,3 +26,14 @@ export interface ChatMessage {
   text: string;
   timestamp: Date;
 }
+// types.ts
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  techStack: string[];
+  imageUrl: string;
+  demoUrl?: string;       // Link dẫn sang web bên ngoài (nếu có)
+  hasInternalDemo?: boolean; // True = Chạy demo trên web này (gọi API Python)
+  repoUrl?: string;
+}
